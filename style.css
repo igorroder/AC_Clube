@@ -1983,7 +1983,14 @@ p {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
-  bottom: 1rem;
+  bottom: 0rem;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 10px 20px 20px;
+  background-color: #ffffffb5;
+  border-radius: 0 0 8px 8px;
 }
 
 .carousel-social {
@@ -2010,6 +2017,7 @@ p {
 
 .carousel-txt {
   text-align: start;
+  margin-right: 10px;
 
 }
 
