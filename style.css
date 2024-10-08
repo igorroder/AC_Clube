@@ -1965,10 +1965,16 @@ p {
   display: flex;
   width: 100%;
   background-color: white;
-  padding: 5px 15px 5px 15px;
+  padding: 10px 15px 10px 15px;
   border-radius: 5px;
   color: #333;
   cursor: pointer;
   align-items: center;
   justify-content: space-between;
+}
+
+
+.dropdown-btn:hover {
+  background: var(--primary);
+  color: #fff
 }
