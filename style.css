@@ -1983,6 +1983,7 @@ p {
   display: flex !important;
   align-items: center;
   justify-content: space-between;
+  bottom: 1rem;
 }
 
 .carousel-social {
