@@ -1790,6 +1790,9 @@ p {
   background-color: var(--white);
   position: relative;
 }
+ .footer-widget {
+  text-align: center;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .footer-eleven {
     padding-top: 30px;
