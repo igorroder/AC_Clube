@@ -1024,7 +1024,7 @@ p {
 @media (max-width: 767px) {
   .about-five {
     padding-top: 30px;
-    padding-bottom:60px;
+    padding-bottom: 30px;
   }
 }
 .about-five-content{
@@ -1974,8 +1974,48 @@ p {
   justify-content: space-between;
 }
 
-
 .dropdown-btn:hover {
   background: var(--primary);
   color: #fff
+}
+
+.carousel-caption {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-social {
+  list-style: none;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carousel-social  li {
+  display: inline-block;
+}
+
+.carousel-social  a {
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.carousel-social  a:hover {
+  color: #007bff; /* cor ao passar o mouse */
+}
+
+.carousel-txt {
+  text-align: start;
+
+}
+
+.carousel-title {
+  font-size: 14px;
+}
+
+.carousel-description {
+ font-size: 10px;
 }
