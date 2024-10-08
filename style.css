@@ -1153,6 +1153,7 @@ p {
 }
 .about-image-five img {
   width: 100%;
+  border-radius: 8px;
   z-index: 2;
 }
 
@@ -1797,13 +1798,13 @@ p {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .footer-eleven .footer-widget {
-    margin-top: 40px;
+    margin-top: 10px;
   }
 }
 @media (max-width: 767px) {
   .footer-eleven .footer-widget {
-    margin-top: 40px;
-    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 .footer-eleven .footer-widget h5 {
