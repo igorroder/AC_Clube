@@ -1805,6 +1805,7 @@ p {
   .footer-eleven .footer-widget {
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center;
   }
 }
 .footer-eleven .footer-widget h5 {
@@ -1827,6 +1828,10 @@ p {
 }
 .footer-eleven .f-about p {
   color: var(--dark-3);
+  margin-top: 20px;
+}
+.copyright {
+  text-align: center;
   margin-top: 20px;
 }
 .footer-eleven .f-about .copyright-text {
