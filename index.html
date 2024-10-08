@@ -218,27 +218,45 @@
               Nosso compromisso é conectar, inovar e apoiar os empreendedores de Inhapim, contribuindo para o
               progresso econômico e social da nossa comunidade.
             </p>
-            <div class="about-five-tab">
-              <select class="form-select mt-3" aria-label="Empresas Membros" id="membrosSelect">
-                <option selected>Empresas Membros</option>
-                <option value="1">Empresa Membro 1</option>
-                <option value="2">Empresa Membro 2</option>
-                <option value="3">Empresa Membro 3</option>
-              </select>
-            
-              <select class="form-select mt-3" aria-label="Empresas Conveniadas" id="conveniadasSelect">
-                <option selected>Empresas Conveniadas</option>
-                <option value="1">Empresa Conveniada 1</option>
-                <option value="2">Empresa Conveniada 2</option>
-                <option value="3">Empresa Conveniada 3</option>
-              </select>
-            
-              <select class="form-select mt-3" aria-label="Nossos Serviços" id="servicosSelect">
-                <option selected>Nossos Serviços</option>
-                <option value="1">Serviço 1</option>
-                <option value="2">Serviço 2</option>
-                <option value="3">Serviço 3</option>
-              </select>
+            <div class="dropdown-content">
+              <!-- Dropdown para Empresas Membros -->
+              <div class="dropdowns">
+                <a class="dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownMembros"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Empresas Membros
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMembros">
+                  <li><a class="dropdown-item" href="#" data-value="1">Empresa Membro 1</a></li>
+                  <li><a class="dropdown-item" href="#" data-value="2">Empresa Membro 2</a></li>
+                  <li><a class="dropdown-item" href="#" data-value="3">Empresa Membro 3</a></li>
+                </ul>
+              </div>
+
+              <!-- Dropdown para Empresas Conveniadas -->
+              <div class="dropdowns">
+                <a class=" dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownConveniadas"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Empresas Conveniadas
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownConveniadas">
+                  <li><a class="dropdown-item" href="#" data-value="1">Empresa Conveniada 1</a></li>
+                  <li><a class="dropdown-item" href="#" data-value="2">Empresa Conveniada 2</a></li>
+                  <li><a class="dropdown-item" href="#" data-value="3">Empresa Conveniada 3</a></li>
+                </ul>
+              </div>
+
+              <!-- Dropdown para Nossos Serviços -->
+              <div class="dropdowns">
+                <a class="dropdown-btn dropdown-toggle" href="#" role="button" id="dropdownServicos"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Nossos Serviços
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownServicos">
+                  <li><a class="dropdown-item" href="#" data-value="1">Serviço 1</a></li>
+                  <li><a class="dropdown-item" href="#" data-value="2">Serviço 2</a></li>
+                  <li><a class="dropdown-item" href="#" data-value="3">Serviço 3</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
