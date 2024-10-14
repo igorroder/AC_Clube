@@ -1,6 +1,6 @@
 # AC_Clube
 
-- [ ] Fazer Referencia ao Qualicard.
+- [x] Fazer Referencia ao Qualicard.
 - [ ] Adicionar todos os banners usando js e jsom.
 - [ ] Criar pagina de Membros AC-Club.
 - [ ] Criar pagina das Empresas Conveniadas.
