@@ -1529,6 +1529,17 @@ p {
   align-items: center;
 }
 
+.section-benefit{
+  background-color: var(--light-3);
+}
+
+.checklist-benefit li {
+  color: #383838 !important;
+}
+.checklist-benefit li i {
+  color: #27d045 !important;
+}
+
 .checklist li i {
   color: #87ffe4;
   margin-right: 10px;
@@ -1877,7 +1888,7 @@ p {
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .footer-eleven {
     padding-top: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
