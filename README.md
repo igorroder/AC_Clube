@@ -6,5 +6,5 @@
 - [x] Criar pagina com formula de seja membro.
 - [x] Criar pagina de Beneficios.
 - [x] Criar pagina da galeria.
-- [ ] Criar pagina de Eventos / Calendario.
+- [x] Criar pagina de Eventos / Calendario.
 - [ ] Adicionar todos os banners usando js e jsom.
