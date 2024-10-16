@@ -1019,7 +1019,6 @@ p {
   about-05 css
 ===========================*/
 .about-five {
-  background-color: var(--light-3);
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -2260,6 +2259,7 @@ p {
 
 main {
   flex: 1;
+  background-color: var(--light-3);
 }
 
 .base-container {
