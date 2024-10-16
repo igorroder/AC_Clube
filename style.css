@@ -1019,8 +1019,8 @@ p {
   about-05 css
 ===========================*/
 .about-five {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .about-five {
@@ -1882,13 +1882,13 @@ p {
 
 /* Footer eleven css */
 .footer-eleven {
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: var(--white);
   position: relative;
 }
  .footer-widget {
-  text-align: center;
+  text-align: start;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .footer-eleven {
