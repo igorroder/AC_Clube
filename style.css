@@ -1926,6 +1926,7 @@ p {
   color: var(--dark-3);
   margin-top: 10px;
   margin-bottom: 20px;
+  text-align: start;
 }
 .copyright {
   text-align: center;
