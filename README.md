@@ -7,4 +7,4 @@
 - [x] Criar pagina de Beneficios.
 - [x] Criar pagina da galeria.
 - [x] Criar pagina de Eventos / Calendario.
-- [ ] Adicionar todos os banners usando js e jsom.
+- [x] Adicionar todos os banners usando js e jsom.

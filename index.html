@@ -404,8 +404,6 @@
   <script src="assets/js/tiny-slider.js"></script>
 
   <script>
-
-
     const carouselItems = [
       {
         "name": "Ilinet Fibra Óptica",
@@ -438,7 +436,7 @@
         "site": ""
       },
       {
-        "name": "HeA Odontologia Premium",
+        "name": "HeA Odontologia",
         "banner": "assets/images/header/HeA Odontologia Premium.png",
         "description": "Odontologia de alta qualidade para o seu sorriso perfeito.",
         "address": "Rua Carmo Viggiano, Número 2 Centro, Inhapim - MG",
@@ -458,7 +456,7 @@
         "site": ""
       },
       {
-        "name": "Nara Perfumes Importados",
+        "name": "Nara Perfumes",
         "banner": "assets/images/header/Nara Perfumes Importados.png",
         "description": "Os melhores perfumes importados para você se destacar.",
         "address": "",
@@ -468,7 +466,7 @@
         "site": ""
       },
       {
-        "name": "Lara Marques Promarketing",
+        "name": "Lara Marques",
         "banner": "assets/images/header/Lara Marques Promarketing.png",
         "description": "Consultoria em marketing para alavancar seu negócio.",
         "address": "",
@@ -478,7 +476,7 @@
         "site": ""
       },
       {
-        "name": "Elaine Ribeiro de Freitas Advogada",
+        "name": "Elaine Ribeiro",
         "banner": "assets/images/header/Elaine Ribeiro de Freitas Advogada.png",
         "description": "Advocacia especializada para resolver seus problemas jurídicos.",
         "address": "",
@@ -518,7 +516,7 @@
         "site": ""
       },
       {
-        "name": "Laborcentro Laboratório de Análises Clínicas",
+        "name": "Laborcentro",
         "banner": "assets/images/header/Laborcentro Laboratório de Análises Clínicas.png",
         "description": "Resultados precisos e confiáveis em exames laboratoriais.",
         "address": "Praça Alaíde Quintela Soares, 29 - Centro, Inhapim - MG",
@@ -530,46 +528,43 @@
     ]
 
     carouselItems.forEach((item, index) => {
-  // Define a classe "active" para o primeiro item do carrossel
-  let active = index === 0 ? "active" : "";
+      // Define a classe "active" para o primeiro item do carrossel
+      let active = index === 0 ? "active" : "";
 
-  // Seleciona o container do carrossel
-  const container = document.getElementById("container-carousel");
+      // Seleciona o container do carrossel
+      const container = document.getElementById("container-carousel");
 
-  // Gera o HTML para cada item do carrossel
-  const carouselItemHTML = `
-    <div class="carousel-item ${active}" data-bs-interval="2000">
-      <img src="${item.banner}" class="d-block w-100" alt="${item.name}">
-      <div class="carousel-caption d-none d-md-block">
-        <div class="carousel-txt">
-          <h5 class="carousel-title">${item.name}</h5>
+      // Gera o HTML para cada item do carrossel
+      const carouselItemHTML = `
+        <div class="carousel-item ${active}" data-bs-interval="2000">
+          <img src="${item.banner}" class="d-block w-100" alt="${item.name}">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-txt">
+              <h5 class="carousel-title">${item.name}</h5>
+            </div>
+            <ul class="carousel-social">
+              <li>
+                <a href="https://facebook.com" target="_blank">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com" target="_blank">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul class="carousel-social">
-          <li>
-            <a href="https://facebook.com" target="_blank">
-              <i class="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com" target="_blank">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  `;
+      `;
 
-  // Adiciona o item ao container, sem sobrescrever os anteriores
-  container.innerHTML += carouselItemHTML;
-});
-
-
+      container.innerHTML += carouselItemHTML;
+    });
 
 
     //===== close navbar-collapse when a  clicked
