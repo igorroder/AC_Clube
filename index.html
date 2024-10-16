@@ -156,87 +156,7 @@
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-image">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner header-image">
-                <div class="carousel-item active" data-bs-interval="2000">
-                  <img src="assets/images/header/ilinet.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <div class="carousel-txt">
-                      <h5 class="carousel-title">Ilinet Fibra Óptica</h5>
-                      <!-- <p class="carousel-description">Conectando você ao futuro com velocidade e confiança!</p> -->
-                    </div>
-                    <ul class="carousel-social">
-                      <li>
-                        <a href="https://facebook.com" target="_blank">
-                          <i class="fab fa-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://instagram.com" target="_blank">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://www.whatsapp.com" target="_blank">
-                          <i class="fab fa-whatsapp"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                  <img src="assets/images/header/irmão-eletromóveis.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <div class="carousel-txt">
-                      <h5 class="carousel-title">Irmão Eletromóveis</h5>
-                      <!-- <p class="carousel-description">Inovação e conforto para transformar sua casa!</p> -->
-                    </div>
-                    <ul class="carousel-social">
-                      <li>
-                        <a href="https://facebook.com" target="_blank">
-                          <i class="fab fa-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://instagram.com" target="_blank">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com" target="_blank">
-                          <i class="fab fa-whatsapp"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                  <img src="assets/images/header/central-otica.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                    <div class="carousel-txt">
-                      <h5 class="carousel-title">Central Ótica</h5>
-                      <!-- <p class="carousel-description">Enxergue a vida com clareza e estilo!</p> -->
-                    </div>
-                    <ul class="carousel-social">
-                      <li>
-                        <a href="https://facebook.com" target="_blank">
-                          <i class="fab fa-facebook"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://instagram.com" target="_blank">
-                          <i class="fab fa-instagram"></i>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com" target="_blank">
-                          <i class="fab fa-whatsapp"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-              </div>
+              <div class="carousel-inner header-image" id="container-carousel"></div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -362,7 +282,7 @@
 
             <h4>O seu cartão de benefícios</h4>
             <p>
-              O mais completo cartão de benefícios para você e sua família. 
+              O mais completo cartão de benefícios para você e sua família.
               Acesso rápido e prático aos serviços essenciais à saúde com os melhores parceiros da cidade.
             </p>
             <ul class="checklist">
@@ -373,15 +293,15 @@
               <li><i class="fas fa-check-circle"></i> Desconto em Exames</li>
             </ul>
 
-            <h5 class="checklist-title" >Peça já o seu cartão</h5>
+            <h5 class="checklist-title">Peça já o seu cartão</h5>
             <div class="light-rounded-buttons">
               <a href="https://wa.me/5533998801097" class="checklist-btn">
                 <div class="checklist-txt"> Pessoa fisica</div>
-                <div class="checklist-price" >R$29,90</div>
+                <div class="checklist-price">R$29,90</div>
               </a>
               <a href="https://wa.me/5533998801097" class="checklist-btn">
                 <div class="checklist-txt"> Pessoa juridica</div>
-                <div class="checklist-price" >R$27,90</div>
+                <div class="checklist-price">R$27,90</div>
               </a>
             </div>
           </div>
@@ -398,7 +318,7 @@
       <div class="row">
 
         <div class="col-12">
-          
+
         </div>
       </div>
     </div>
@@ -485,6 +405,173 @@
 
   <script>
 
+
+    const carouselItems = [
+      {
+        "name": "Ilinet Fibra Óptica",
+        "banner": "assets/images/header/Ilinet.png",
+        "description": "Conectando você ao futuro com velocidade e confiança",
+        "address": "Rua Cel. Guilherme, 90, Centro, Inhapim",
+        "phone": "(33) 3315-1084",
+        "WhatsApp": "https://wa.me/5533999073400",
+        "Instagram": "https://www.instagram.com/jl.inet/",
+        "site": "www.jlinet.com.br"
+      },
+      {
+        "name": "Central Ótica Inhapim",
+        "banner": "assets/images/header/Central Ótica.png",
+        "description": "Sua visão é nossa prioridade, com as melhores opções em óculos e atendimento especializado.",
+        "address": "Rua Alberto Azevedo n09, Centro",
+        "phone": "33 99945 1211",
+        "WhatsApp": "https://wa.me/5533999451211",
+        "Instagram": "https://www.instagram.com/centraloticainhapim/",
+        "site": ""
+      },
+      {
+        "name": "Irmão Eletromóveis",
+        "banner": "assets/images/header/Irmão Eletromóveis.png",
+        "description": "Móveis e eletrodomésticos de qualidade para transformar sua casa.",
+        "address": "",
+        "phone": "",
+        "WhatsApp": "",
+        "Instagram": "",
+        "site": ""
+      },
+      {
+        "name": "HeA Odontologia Premium",
+        "banner": "assets/images/header/HeA Odontologia Premium.png",
+        "description": "Odontologia de alta qualidade para o seu sorriso perfeito.",
+        "address": "Rua Carmo Viggiano, Número 2 Centro, Inhapim - MG",
+        "phone": "33 3315-2048",
+        "WhatsApp": "https://wa.me/5533999630607",
+        "Instagram": "https://www.instagram.com/hea.odontologia.premium/",
+        "site": "https://heaodontologiapremium.com/"
+      },
+      {
+        "name": "Moda Fitness Feminina",
+        "banner": "assets/images/header/Moda Fitness Feminina.png",
+        "description": "Roupas fitness femininas com estilo e conforto para seu treino.",
+        "address": "Rua Benito Porcaro, 55 - Bairro Limoeiro - Caratinga - MG",
+        "phone": "33 98451-3148",
+        "WhatsApp": "https://wa.me/5533984513148",
+        "Instagram": "https://www.instagram.com/edifit24?igsh=MTBmODRtYmFpMGhvNA==",
+        "site": ""
+      },
+      {
+        "name": "Nara Perfumes Importados",
+        "banner": "assets/images/header/Nara Perfumes Importados.png",
+        "description": "Os melhores perfumes importados para você se destacar.",
+        "address": "",
+        "phone": "33 998496800",
+        "WhatsApp": "https://wa.me/5533998496800",
+        "Instagram": "https://www.instagram.com/naraperfumes__/",
+        "site": ""
+      },
+      {
+        "name": "Lara Marques Promarketing",
+        "banner": "assets/images/header/Lara Marques Promarketing.png",
+        "description": "Consultoria em marketing para alavancar seu negócio.",
+        "address": "",
+        "phone": "33 998046855",
+        "WhatsApp": "https://wa.me/5533998046855",
+        "Instagram": "",
+        "site": ""
+      },
+      {
+        "name": "Elaine Ribeiro de Freitas Advogada",
+        "banner": "assets/images/header/Elaine Ribeiro de Freitas Advogada.png",
+        "description": "Advocacia especializada para resolver seus problemas jurídicos.",
+        "address": "",
+        "phone": "11 995887018",
+        "WhatsApp": "https://wa.me/5511995887018",
+        "Instagram": "",
+        "site": ""
+      },
+      {
+        "name": "Auto Tintas União",
+        "banner": "assets/images/header/Auto Tintas União.png",
+        "description": "Especialistas em tintas automotivas para um acabamento perfeito.",
+        "address": "Rua Alberto Azevedo, 170, Inhapim, MG, Brazil",
+        "phone": "33 3315-1893",
+        "WhatsApp": "https://wa.me/553333151893",
+        "Instagram": "",
+        "site": ""
+      },
+      {
+        "name": "Matel Elétrica",
+        "banner": "assets/images/header/Matel Elétrica.png",
+        "description": "A única loja da região com linha completa de materiais elétricos.",
+        "address": "Rua Major Aquiles, 36 - Ao Lado do Posto Coringa, Inhapim",
+        "phone": "33 998742330",
+        "WhatsApp": "https://wa.me/5533998742330",
+        "Instagram": "https://www.instagram.com/mateleletrica/",
+        "site": ""
+      },
+      {
+        "name": "Auto Escola Inhapim",
+        "banner": "assets/images/header/Auto Escola Inhapim.png",
+        "description": "CENTRO DE FORMAÇÃO DE CONDUTORES!",
+        "address": "Rua Oswaldo Silva Araújo, 467-Centro/ Inhapim",
+        "phone": "553333151977",
+        "WhatsApp": "https://wa.me/553333151977",
+        "Instagram": "https://www.instagram.com/autoescolainhapim/",
+        "site": ""
+      },
+      {
+        "name": "Laborcentro Laboratório de Análises Clínicas",
+        "banner": "assets/images/header/Laborcentro Laboratório de Análises Clínicas.png",
+        "description": "Resultados precisos e confiáveis em exames laboratoriais.",
+        "address": "Praça Alaíde Quintela Soares, 29 - Centro, Inhapim - MG",
+        "phone": "(33) 3315-1011",
+        "WhatsApp": "https://wa.me/553333151011",
+        "Instagram": "@laboratoriolaborcentro",
+        "site": "www.laboratoriolaborcentro.com.br"
+      }
+    ]
+
+    carouselItems.forEach((item, index) => {
+  // Define a classe "active" para o primeiro item do carrossel
+  let active = index === 0 ? "active" : "";
+
+  // Seleciona o container do carrossel
+  const container = document.getElementById("container-carousel");
+
+  // Gera o HTML para cada item do carrossel
+  const carouselItemHTML = `
+    <div class="carousel-item ${active}" data-bs-interval="2000">
+      <img src="${item.banner}" class="d-block w-100" alt="${item.name}">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-txt">
+          <h5 class="carousel-title">${item.name}</h5>
+        </div>
+        <ul class="carousel-social">
+          <li>
+            <a href="https://facebook.com" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  `;
+
+  // Adiciona o item ao container, sem sobrescrever os anteriores
+  container.innerHTML += carouselItemHTML;
+});
+
+
+
+
     //===== close navbar-collapse when a  clicked
     let navbarTogglerNine = document.querySelector(
       ".navbar-nine .navbar-toggler"
@@ -523,6 +610,10 @@
       'width': 900,
       'autoplayVideos': true,
     });
+
+    // Seleciona o container onde você quer inserir o conteúdo
+
+
 
   </script>
 </body>
