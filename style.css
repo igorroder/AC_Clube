@@ -60,6 +60,11 @@
     0px 20px 32px rgba(96, 97, 112, 0.24);
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: var(--font-family);
   color: var(--black);
@@ -1888,7 +1893,7 @@ p {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .footer-eleven {
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 30px;
   }
 }
@@ -1901,7 +1906,7 @@ p {
   .footer-eleven .footer-widget {
     margin-top: 10px;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: start;
   }
 }
 .footer-eleven .footer-widget h5 {
@@ -2251,4 +2256,14 @@ p {
 
 .event-date .month {
   font-size: 0.8rem;
+}
+
+main {
+  flex: 1;
+}
+
+.base-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
