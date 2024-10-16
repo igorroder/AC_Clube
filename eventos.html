@@ -53,23 +53,22 @@
             <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a  href="index.html">Início</a>
+                  <a href="index.html">Início</a>
                 </li>
                 <li class="nav-item">
-                  <a  href="./membros.html">Membros AC-Club</a>
-                </li>
-
-                <li class="nav-item">
-                  <a  href="./conveniadas.html">Empresas Conveniadas</a>
+                  <a href="./membros.html">Membros AC-Club</a>
                 </li>
                 <li class="nav-item">
-                  <a  href="./beneficios.html">Benefícios</a>
+                  <a href="./conveniadas.html">Empresas Conveniadas</a>
                 </li>
                 <li class="nav-item">
-                  <a  href="./eventos.html">Eventos</a>
+                  <a href="./beneficios.html">Benefícios</a>
                 </li>
                 <li class="nav-item">
-                  <a  href="./eventos.html">Galeria de Fotos</a>
+                  <a href="./eventos.html">Eventos</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./galeria.html">Galeria de Fotos</a>
                 </li>
               </ul>
             </div>
@@ -144,52 +143,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-12 mt-5">
-          <ul class="event-list mt-4">
-            <li>
-              <div class="event-details">
-                <div class="event-title">Café com Networking Empresarial</div>
-                <div class="event-description">
-                  Um encontro casual onde empresários locais podem trocar experiências e fazer novas conexões.
-                  O evento inclui palestras rápidas sobre inovação no mercado e oportunidades de parceria.
-                </div>
-              </div>
-              <div class="event-date">
-                <div>
-                  <div class="day">15</div>
-                  <div class="month">Out</div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="event-details">
-                <div class="event-title">Workshop de Transformação Digital</div>
-                <div class="event-description">Um evento focado em mostrar aos associados como implementar tecnologias
-                  digitais para
-                  otimizar operações e aumentar a competitividade, com especialistas em e-commerce e automação.</div>
-              </div>
-              <div class="event-date">
-                <div>
-                  <div class="day">22</div>
-                  <div class="month">Nov</div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="event-details">
-                <div class="event-title">Rodada de Negócios Setorial</div>
-                <div class="event-description">Um evento voltado para um setor específico (como comércio ou serviços)
-                  onde empresas participantes podem apresentar suas soluções e criar parcerias estratégicas.</div>
-              </div>
-              <div class="event-date">
-                <div>
-                  <div class="day">10</div>
-                  <div class="month">Dez</div>
-                </div>
-              </div>
-            </li>
-          </ul>
+          <ul class="event-list mt-4" id="event-list"> </ul>
         </div>
       </div>
     </div>
@@ -277,6 +231,47 @@
   <script src="assets/js/tiny-slider.js"></script>
 
   <script>
+    const carouselItems = [
+      {
+        "title": "Rodada de Negócios Setorial",
+        "description": "Um evento voltado para um setor específico (como comércio ou serviços) onde empresas participantes podem apresentar suas soluções e criar parcerias estratégicas.",
+        "day": "10",
+        "month": "Dez"
+      },
+      {
+        "title": "Café com Networking Empresarial",
+        "description": "Um encontro casual onde empresários locais podem trocar experiências e fazer novas conexões. O evento inclui palestras rápidas sobre inovação no mercado e oportunidades de parceria.",
+        "day": "15",
+        "month": "Out"
+      },
+      {
+        "title": "Workshop de Transformação Digital",
+        "description": "Um evento focado em mostrar aos associados como implementar tecnologias digitais para otimizar operações e aumentar a competitividade, com especialistas em e-commerce e automação.",
+        "day": "22",
+        "month": "Nov"
+      },
+
+    ]
+
+    eventItems.forEach((item, index) => {
+      const container = document.getElementById("event-list");
+      const eventItemHTML = `
+             <li>
+              <div class="event-details">
+                <div class="event-title">${item.title}</div>
+                <div class="event-description">${item.description}</div>
+              </div>
+              <div class="event-date">
+                <div>
+                  <div class="day">${item.day}</div>
+                  <div class="month">${item.month}</div>
+                </div>
+              </div>
+            </li>
+          `;
+
+      container.innerHTML += eventItemHTML;
+    });
 
     //===== close navbar-collapse when a  clicked
     let navbarTogglerNine = document.querySelector(

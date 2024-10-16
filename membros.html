@@ -58,7 +58,6 @@
                 <li class="nav-item">
                   <a href="./membros.html">Membros AC-Club</a>
                 </li>
-
                 <li class="nav-item">
                   <a href="./conveniadas.html">Empresas Conveniadas</a>
                 </li>
@@ -69,7 +68,7 @@
                   <a href="./eventos.html">Eventos</a>
                 </li>
                 <li class="nav-item">
-                  <a href="./eventos.html">Galeria de Fotos</a>
+                  <a href="./galeria.html">Galeria de Fotos</a>
                 </li>
               </ul>
             </div>
@@ -233,7 +232,7 @@
 
   <script>
 
-    const carouselItems = [
+    const memberItems = [
       {
         "name": "Ilinet Fibra Óptica",
         "banner": "assets/images/header/Ilinet.png",
@@ -356,15 +355,9 @@
       }
     ]
 
-    carouselItems.forEach((item, index) => {
-      // Define a classe "active" para o primeiro item do carrossel
-      let active = index === 0 ? "active" : "";
-
-      // Seleciona o container do carrossel
+    memberItems.forEach((item, index) => {
       const container = document.getElementById("member-list");
-
-      // Gera o HTML para cada item do carrossel
-      const carouselItemHTML = `
+      const memberItemHTML = `
             <li>
               <div class="member-avatar">
                 <img src="${item.banner}" alt="${item.name}">
@@ -376,7 +369,7 @@
             </li>
           `;
 
-      container.innerHTML += carouselItemHTML;
+      container.innerHTML += memberItemHTML;
     });
 
 
