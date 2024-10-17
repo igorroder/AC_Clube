@@ -427,7 +427,7 @@ p {
     padding: 5px 0 0;
   }
 }
-@media only screen and (max-width: 308px) {
+@media only screen and (max-width: 290px) {
   .navbar-area.navbar-nine {
     padding: 0;
   }
@@ -935,7 +935,7 @@ p {
     padding: 60px 0 40px 0;
   }
 }
-@media only screen and (max-width: 308px) {
+@media only screen and (max-width: 290px) {
   .header-eight {
     padding: 55px 0 40px 0;
   }
@@ -949,14 +949,14 @@ p {
     margin-top: 20px;
   }
 }
-@media only screen and (max-width: 308px) {
+@media only screen and (max-width: 290px) {
   .header-eight .header-image {
     margin-top: 20px;
   }
 }
-@media only screen and (max-width: 308px) {
+@media only screen and (max-width: 290px) {
   .header-eight .header-content p {
-   font-size: 13px;
+   font-size: 12px;
   }
 }
 .header-eight .header-content {
@@ -1003,7 +1003,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 308px) {
+@media only screen and (max-width: 290px) {
   .header-eight .button {
     margin-top: 20px;
   }
