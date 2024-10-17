@@ -209,7 +209,7 @@ p {
   text-align: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 12px 24px;
+  padding: 10px 24px;
   border-radius: 4px;
   border: 1px solid transparent;
 }
@@ -424,7 +424,7 @@ p {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .navbar-area.navbar-nine {
-    padding: 10px 0 0;
+    padding: 5px 0 0;
   }
 }
 @media only screen and (max-width: 308px) {
@@ -932,7 +932,7 @@ p {
 }
 @media (max-width: 767px) {
   .header-eight {
-    padding: 65px 0 40px 0;
+    padding: 60px 0 40px 0;
   }
 }
 @media only screen and (max-width: 308px) {
