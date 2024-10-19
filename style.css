@@ -407,7 +407,7 @@ p {
 /*===== NAVBAR NINE =====*/
 .navbar-area.navbar-nine {
   background: var(--primary);
-  padding: 10px 0;
+  padding: 5px 0 0;
   position: absolute;
   left: 0;
   top: 0;
@@ -990,6 +990,11 @@ p {
   color: var(--white);
   opacity: 0.7;
 }
+@media (min-width: 800px) {
+ .header-eight .header-content p {
+  font-size: x-large;
+}
+}
 .header-eight .button {
   margin-top: 30px;
   display: flex;
@@ -1147,6 +1152,13 @@ p {
   display: grid; 
   grid-template-columns: repeat(2, 1fr); 
   gap: 1px
+}
+
+@media (min-width: 800px) {
+  .about-image-conteiner {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5px
+  }
 }
 
 .about-image-conteiner img {
@@ -2191,7 +2203,6 @@ p {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 600px;
 }
 
 .member-list li {
@@ -2232,7 +2243,6 @@ p {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 600px;
 }
 
 .event-list li {
