@@ -954,9 +954,9 @@ p {
     margin-top: 20px;
   }
 }
-@media only screen and (max-width: 290px) {
+@media only screen and (max-width: 420px) {
   .header-eight .header-content p {
-   font-size: 12px;
+   font-size: 14px;
   }
 }
 .header-eight .header-content {
