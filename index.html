@@ -330,236 +330,238 @@
   <script src="assets/js/tiny-slider.js"></script>
 
   <script>
-    // fetch('https://vnwmilmmlsziggyrpmty.supabase.co/rest/v1/Associado', {
-    //   method: 'GET', 
-    //   headers: {
-    //     'Content-Type': 'application/json', 
-    //     'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZud21pbG1tbHN6aWdneXJwbXR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg0OTUxNzEsImV4cCI6MjA0NDA3MTE3MX0.sd_r0TYhej4ZZCa9HkvPUKxW2AjJdnMqfgNUj_fD8jE' // Passa a API Key no header
-    //   }
-    // })
-    //   .then(response => {
-    //     if (!response.ok) {
-    //       throw new Error('Erro na requisição: ' + response.statusText);
-    //     }
-    //     return response.json();
-    //   })
-    //   .then(data => {
-    //     console.log(data);
-    //   })
-    //   .catch(error => {
-    //     console.error('Erro:', error);
-    //   });
-
-    const carouselItems = [
-      {
-        "Banner": "assets/images/header/jlinet.png",
-        "Nome": "Jlinet Fibra Óptica",
-        "Descrição": "Conectando você ao futuro com velocidade e confiança",
-        "Endereço": "Rua Cel. Guilherme, 90, Centro, Inhapim",
-        "Telefone": "(33) 3315-1084",
-        "WhatsApp": "https://wa.me/5533999073400",
-        "Instagram": "https://www.instagram.com/jl.inet/",
-        "Site": "www.jlinet.com.br",
-        "Facebook": "https://www.facebook.com/jlinet.com.br/?locale=pt_BR"
-      },
-      {
-        "Banner": "assets/images/header/central-ótica.png",
-        "Nome": "Central Ótica Inhapim",
-        "Descrição": "Sua visão é nossa prioridade, com as melhores opções em óculos e atendimento especializado.",
-        "Endereço": "Rua Alberto Azevedo n09, Centro",
-        "Telefone": "33 99945 1211",
-        "WhatsApp": "https://wa.me/5533999451211",
-        "Instagram": "https://www.instagram.com/centraloticainhapim/",
-        "Site": null,
-        "Facebook": "https://www.facebook.com/Centraloticainhapim/?locale=pt_BR"
-      },
-      {
-        "Banner": "assets/images/header/irmão-eletromóveis.png",
-        "Nome": "Irmão Eletromóveis",
-        "Descrição": "Móveis e eletrodomésticos de qualidade para transformar sua casa.",
-        "Endereço": "Rua Osvaldo Silva Araújo, 352 - Inhapim, MG",
-        "Telefone": "33984352617",
-        "WhatsApp": "https://wa.me/5533984352617",
-        "Instagram": "https://www.instagram.com/irmaoseletromoveis?utm_source=qr&igsh=Y2VtMnAwZDdpbmIw",
-        "Site": null,
-        "Facebook": null
-      },
-      {
-        "Banner": "assets/images/header/hea-odontologia-premium.png",
-        "Nome": "HeA Odontologia",
-        "Descrição": "Odontologia de alta qualidade para o seu sorriso perfeito.",
-        "Endereço": "Rua Carmo Viggiano, Número 2 Centro, Inhapim - MG",
-        "Telefone": "33 3315-2048",
-        "WhatsApp": "https://wa.me/5533999630607",
-        "Instagram": "https://www.instagram.com/hea.odontologia.premium/",
-        "Site": "https://heaodontologiapremium.com/",
-        "Facebook": "https://www.facebook.com/HeA.Odontologia.Premium/"
-      },
-      {
-        "Banner": "assets/images/header/moda-fitness-feminina.png",
-        "Nome": "Moda Fitness Feminina",
-        "Descrição": "Roupas fitness femininas com estilo e conforto para seu treino.",
-        "Endereço": "Rua Benito Porcaro, 55 - Bairro Limoeiro - Caratinga - MG",
-        "Telefone": "33 98451-3148",
-        "WhatsApp": "https://wa.me/5533984513148",
-        "Instagram": "https://www.instagram.com/edifit24?igsh=MTBmODRtYmFpMGhvNA==",
-        "Site": null,
-        "Facebook": null
-      },
-      {
-        "Banner": "assets/images/header/nara-perfumes.png",
-        "Nome": "Nara Perfumes",
-        "Descrição": "Os melhores perfumes importados para você se destacar.",
-        "Endereço": null,
-        "Telefone": "(33) 99849-6800",
-        "WhatsApp": "https://wa.me/5533998496800",
-        "Instagram": "https://www.instagram.com/narabperfumes?igsh=MWxsZGh0Y3FlMHY5ZA==",
-        "Site": null,
-        "Facebook": null
-      },
-      {
-        "Banner": "assets/images/header/lmr-marketing.png",
-        "Nome": "Lara Marques",
-        "Descrição": "Consultoria em marketing para alavancar seu negócio.",
-        "Endereço": null,
-        "Telefone": "(33) 99804-6855",
-        "WhatsApp": "https://wa.me/5533998046855",
-        "Instagram": "https://www.instagram.com/lmrpromarketing?igsh=MTB3ODk2d2RzcWJubw==",
-        "Site": null,
-        "Facebook": null
-      },
-      {
-        "Banner": "assets/images/header/elaine-ribeiro.png",
-        "Nome": "Elaine Ribeiro",
-        "Descrição": "Advocacia Extrajudicial Especializada.",
-        "Endereço": null,
-        "Telefone": "(11) 99588-7018",
-        "WhatsApp": "https://wa.me/5511995887018",
-        "Instagram": "https://www.instagram.com/elaine.ribeiro.984991?igsh=aGg2ajd0ZGhuc2F6",
-        "Site": null,
-        "Facebook": "https://www.facebook.com/elaine.ribeiro.984991?mibextid=LQQJ4d"
-      },
-
-      {
-        "Banner": "assets/images/header/auto-tintas-união.png",
-        "Nome": "Auto Tintas União",
-        "Descrição": "Especialistas em tintas automotivas para um acabamento perfeito.",
-        "Endereço": "Rua Alberto Azevedo, 170, Inhapim, MG, Brazil",
-        "Telefone": "33 3315-1893",
-        "WhatsApp": "https://wa.me/553333151893",
-        "Instagram": "https://www.instagram.com/uniaoautotintas?igsh=MTd3aHRnZW96bm51MQ==",
-        "Site": null,
-        "Facebook": "https://www.facebook.com/p/Auto-tintas-união-100057080094387/?locale=pt_BR&_rdr"
-      },
-      {
-        "Banner": "assets/images/header/matel-elétrica.png",
-        "Nome": "Matel Elétrica",
-        "Descrição": "A única loja da região com linha completa de materiais elétricos.",
-        "Endereço": "Rua Major Aquiles, 36 - Ao Lado do Posto Coringa, Inhapim",
-        "Telefone": "33 998742330",
-        "WhatsApp": "https://wa.me/5533998742330",
-        "Instagram": "https://www.instagram.com/mateleletrica/",
-        "Site": "https://beacons.ai/mateleletrica",
-        "Facebook": "https://www.facebook.com/mateleletrica/?locale=pt_BR"
-      },
-      {
-        "Banner": "assets/images/header/auto-escola-inhapim.png",
-        "Nome": "Auto Escola Inhapim",
-        "Descrição": "CENTRO DE FORMAÇÃO DE CONDUTORES!",
-        "Endereço": "Rua Oswaldo Silva Araújo, 467-Centro/ Inhapim",
-        "Telefone": "553333151977",
-        "WhatsApp": "https://wa.me/553333151977",
-        "Instagram": "https://www.instagram.com/autoescolainhapim/",
-        "Site": null,
-        "Facebook": "https://www.facebook.com/cfcInhapim/?locale=pt_BR"
-      },
-      {
-        "Banner": "assets/images/header/laborcentro.png",
-        "Nome": "Laborcentro",
-        "Descrição": "Resultados precisos e confiáveis em exames laboratoriais.",
-        "Endereço": "Praça Alaíde Quintela Soares, 29 - Centro, Inhapim - MG",
-        "Telefone": "(33) 3315-1011",
-        "WhatsApp": "https://wa.me/553333151011",
-        "Instagram": "https://www.instagram.com/laboratoriolaborcentro/",
-        "Site": "www.laboratoriolaborcentro.com.br",
-        "Facebook": "https://www.facebook.com/laboratoriolaborcentro/?locale=pt_BR"
-      },
-      {
-        "Banner": "assets/images/header/casa-dos-azulejos.png",
-        "Nome": "Casa dos Azulejos",
-        "Descrição": "Especialistas em revestimentos e acabamentos para tornar seu projeto ainda mais bonito e sofisticado.",
-        "Endereço": "Rua Alberto Azevedo, 575 centro Inhapim -MG",
-        "Telefone": "(33) 3315-1410",
-        "WhatsApp": "https://wa.me/5533984335023",
-        "Instagram": "https://www.instagram.com/casadosazulejosinhapim/",
-        "Site": "http://www.casadosazulejosinhapim.com.br/",
-        "Facebook": "https://www.facebook.com/casadosazulejosinhapimmg/?locale=pt_BR"
-      },
-      {
-        "Banner": "assets/images/header/Studio-F.png",
-        "Nome": "Studio F. SPA Urbano",
-        "Descrição": "Viva uma experiência incrível! Nós ajudamos mulheres bonitas a se tornarem DESLUMBRANTES!",
-        "Endereço": "Rua Carmo Viggiano, Inhapim, MG, Brazil",
-        "Telefone": "(33) 3315-1367",
-        "WhatsApp": "https://wa.me/553333151367",
-        "Instagram": "https://www.instagram.com/studiofspa/",
-        "Site": "https://loja.studiofspa.com.br/",
-        "Facebook": "https://www.facebook.com/StudioFspaurbano/?locale=pt_BR"
-      },
-      {
-        "Banner": "assets/images/header/madeireira-alvarenga.png",
-        "Nome": "Madeireira Alvarenga",
-        "Descrição": "Material de construção e produtos rurais.",
-        "Endereço": "Osvaldo Silva Araújo nº 667 , Centro Inhapim MG",
-        "Telefone": "(33) 3315-1009",
-        "WhatsApp": null,
-        "Instagram": "https://www.instagram.com/madeireiraalvarenga?igsh=MTNzNnFpbDZvcjcxeA==",
-        "Site": null,
-        "Facebook": "https://www.facebook.com/madeireira.alvarenga.1/about_details?locale=pt_BR"
-      },
-      {
-        "Banner": "assets/images/header/pablo-coelho.png",
-        "Nome": "Pablo Coelho",
-        "Descrição": "Momentos eternizados para sempre.",
-        "Endereço": null,
-        "Telefone": "(33) 99835-4558",
-        "WhatsApp": "https://wa.me/5533998354558",
-        "Instagram": "https://www.instagram.com/pablocoellhoph?igsh=MWoxZ3h3eG00NWJuMA==",
-        "Site": "https://linktr.ee/Pablocoellho?utm_source=linktree_profile_share&ltsid=3eda1648-a8fe-4fa0-974e-6cc6acf47f98",
-        "Facebook": null
+    let carouselItems = []
+    fetch('https://vnwmilmmlsziggyrpmty.supabase.co/rest/v1/membros', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZud21pbG1tbHN6aWdneXJwbXR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg0OTUxNzEsImV4cCI6MjA0NDA3MTE3MX0.sd_r0TYhej4ZZCa9HkvPUKxW2AjJdnMqfgNUj_fD8jE' // Passa a API Key no header
       }
-    ]
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erro na requisição: ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        data.forEach((item, index) => {
+          let active = index === 0 ? "active" : "";
+          const container = document.getElementById("container-carousel");
 
-    carouselItems.forEach((item, index) => {
-      let active = index === 0 ? "active" : "";
-      const container = document.getElementById("container-carousel");
+          const facebookLink = item.facebook ? `<li><a href="${item.facebook}" target="_blank"><i class="fab fa-facebook"></i></a></li>` : "";
+          const instagramLink = item.instagram ? `<li><a href="${item.instagram}" target="_blank"><i class="fab fa-instagram"></i></a></li>` : "";
+          const whatsappLink = item.whatsApp ? `<li><a href="${item.whatsApp}" target="_blank"><i class="fab fa-whatsapp"></i></a></li>` : "";
 
-      const facebookLink = item.Facebook ? `<li><a href="${item.Facebook}" target="_blank"><i class="fab fa-facebook"></i></a></li>` : "";
-      const instagramLink = item.Instagram ? `<li><a href="${item.Instagram}" target="_blank"><i class="fab fa-instagram"></i></a></li>` : "";
-      const whatsappLink = item.WhatsApp ? `<li><a href="${item.WhatsApp}" target="_blank"><i class="fab fa-whatsapp"></i></a></li>` : "";
-
-      const carouselItemHTML = `
-      <div class="carousel-item ${active}" data-bs-interval="2000">
-        <img src="${item.Banner}" class="d-block w-100" alt="${item.Nome}">
-        <div class="carousel-caption d-none d-md-block">
-          <div class="carousel-txt">
-            <h5 class="carousel-title">${item.Nome}</h5>
+          const carouselItemHTML = `
+          <div class="carousel-item ${active}" data-bs-interval="2000">
+            <img src="${item.banner}" class="d-block w-100" alt="${item.nome}">
+            <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-txt">
+                <h5 class="carousel-title">${item.nome}</h5>
+              </div>
+              <ul class="carousel-social">
+                ${facebookLink}
+                ${instagramLink}
+                ${whatsappLink}
+              </ul>
+            </div>
           </div>
-          <ul class="carousel-social">
-            ${facebookLink}
-            ${instagramLink}
-            ${whatsappLink}
-          </ul>
-        </div>
-      </div>
-    `;
+        `;
 
-      container.innerHTML += carouselItemHTML;
-    });
+          container.innerHTML += carouselItemHTML;
+        });
+      })
+      .catch(error => {
+        console.error('Erro:', error);
+      });
+
+    // const carouselItems = [
+    //   {
+    //     "Banner": "assets/images/header/jlinet.png",
+    //     "Nome": "Jlinet Fibra Óptica",
+    //     "Descrição": "Conectando você ao futuro com velocidade e confiança",
+    //     "Endereço": "Rua Cel. Guilherme, 90, Centro, Inhapim",
+    //     "Telefone": "(33) 3315-1084",
+    //     "WhatsApp": "https://wa.me/5533999073400",
+    //     "Instagram": "https://www.instagram.com/jl.inet/",
+    //     "Site": "www.jlinet.com.br",
+    //     "Facebook": "https://www.facebook.com/jlinet.com.br/?locale=pt_BR"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/central-ótica.png",
+    //     "Nome": "Central Ótica Inhapim",
+    //     "Descrição": "Sua visão é nossa prioridade, com as melhores opções em óculos e atendimento especializado.",
+    //     "Endereço": "Rua Alberto Azevedo n09, Centro",
+    //     "Telefone": "33 99945 1211",
+    //     "WhatsApp": "https://wa.me/5533999451211",
+    //     "Instagram": "https://www.instagram.com/centraloticainhapim/",
+    //     "Site": null,
+    //     "Facebook": "https://www.facebook.com/Centraloticainhapim/?locale=pt_BR"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/irmão-eletromóveis.png",
+    //     "Nome": "Irmão Eletromóveis",
+    //     "Descrição": "Móveis e eletrodomésticos de qualidade para transformar sua casa.",
+    //     "Endereço": "Rua Osvaldo Silva Araújo, 352 - Inhapim, MG",
+    //     "Telefone": "33984352617",
+    //     "WhatsApp": "https://wa.me/5533984352617",
+    //     "Instagram": "https://www.instagram.com/irmaoseletromoveis?utm_source=qr&igsh=Y2VtMnAwZDdpbmIw",
+    //     "Site": null,
+    //     "Facebook": null
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/hea-odontologia-premium.png",
+    //     "Nome": "HeA Odontologia",
+    //     "Descrição": "Odontologia de alta qualidade para o seu sorriso perfeito.",
+    //     "Endereço": "Rua Carmo Viggiano, Número 2 Centro, Inhapim - MG",
+    //     "Telefone": "33 3315-2048",
+    //     "WhatsApp": "https://wa.me/5533999630607",
+    //     "Instagram": "https://www.instagram.com/hea.odontologia.premium/",
+    //     "Site": "https://heaodontologiapremium.com/",
+    //     "Facebook": "https://www.facebook.com/HeA.Odontologia.Premium/"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/moda-fitness-feminina.png",
+    //     "Nome": "Moda Fitness Feminina",
+    //     "Descrição": "Roupas fitness femininas com estilo e conforto para seu treino.",
+    //     "Endereço": "Rua Benito Porcaro, 55 - Bairro Limoeiro - Caratinga - MG",
+    //     "Telefone": "33 98451-3148",
+    //     "WhatsApp": "https://wa.me/5533984513148",
+    //     "Instagram": "https://www.instagram.com/edifit24?igsh=MTBmODRtYmFpMGhvNA==",
+    //     "Site": null,
+    //     "Facebook": null
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/nara-perfumes.png",
+    //     "Nome": "Nara Perfumes",
+    //     "Descrição": "Os melhores perfumes importados para você se destacar.",
+    //     "Endereço": null,
+    //     "Telefone": "(33) 99849-6800",
+    //     "WhatsApp": "https://wa.me/5533998496800",
+    //     "Instagram": "https://www.instagram.com/narabperfumes?igsh=MWxsZGh0Y3FlMHY5ZA==",
+    //     "Site": null,
+    //     "Facebook": null
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/lmr-marketing.png",
+    //     "Nome": "Lara Marques",
+    //     "Descrição": "Consultoria em marketing para alavancar seu negócio.",
+    //     "Endereço": null,
+    //     "Telefone": "(33) 99804-6855",
+    //     "WhatsApp": "https://wa.me/5533998046855",
+    //     "Instagram": "https://www.instagram.com/lmrpromarketing?igsh=MTB3ODk2d2RzcWJubw==",
+    //     "Site": null,
+    //     "Facebook": null
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/elaine-ribeiro.png",
+    //     "Nome": "Elaine Ribeiro",
+    //     "Descrição": "Advocacia Extrajudicial Especializada.",
+    //     "Endereço": null,
+    //     "Telefone": "(11) 99588-7018",
+    //     "WhatsApp": "https://wa.me/5511995887018",
+    //     "Instagram": "https://www.instagram.com/elaine.ribeiro.984991?igsh=aGg2ajd0ZGhuc2F6",
+    //     "Site": null,
+    //     "Facebook": "https://www.facebook.com/elaine.ribeiro.984991?mibextid=LQQJ4d"
+    //   },
+
+    //   {
+    //     "Banner": "assets/images/header/auto-tintas-união.png",
+    //     "Nome": "Auto Tintas União",
+    //     "Descrição": "Especialistas em tintas automotivas para um acabamento perfeito.",
+    //     "Endereço": "Rua Alberto Azevedo, 170, Inhapim, MG, Brazil",
+    //     "Telefone": "33 3315-1893",
+    //     "WhatsApp": "https://wa.me/553333151893",
+    //     "Instagram": "https://www.instagram.com/uniaoautotintas?igsh=MTd3aHRnZW96bm51MQ==",
+    //     "Site": null,
+    //     "Facebook": "https://www.facebook.com/p/Auto-tintas-união-100057080094387/?locale=pt_BR&_rdr"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/matel-elétrica.png",
+    //     "Nome": "Matel Elétrica",
+    //     "Descrição": "A única loja da região com linha completa de materiais elétricos.",
+    //     "Endereço": "Rua Major Aquiles, 36 - Ao Lado do Posto Coringa, Inhapim",
+    //     "Telefone": "33 998742330",
+    //     "WhatsApp": "https://wa.me/5533998742330",
+    //     "Instagram": "https://www.instagram.com/mateleletrica/",
+    //     "Site": "https://beacons.ai/mateleletrica",
+    //     "Facebook": "https://www.facebook.com/mateleletrica/?locale=pt_BR"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/auto-escola-inhapim.png",
+    //     "Nome": "Auto Escola Inhapim",
+    //     "Descrição": "CENTRO DE FORMAÇÃO DE CONDUTORES!",
+    //     "Endereço": "Rua Oswaldo Silva Araújo, 467-Centro/ Inhapim",
+    //     "Telefone": "553333151977",
+    //     "WhatsApp": "https://wa.me/553333151977",
+    //     "Instagram": "https://www.instagram.com/autoescolainhapim/",
+    //     "Site": null,
+    //     "Facebook": "https://www.facebook.com/cfcInhapim/?locale=pt_BR"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/laborcentro.png",
+    //     "Nome": "Laborcentro",
+    //     "Descrição": "Resultados precisos e confiáveis em exames laboratoriais.",
+    //     "Endereço": "Praça Alaíde Quintela Soares, 29 - Centro, Inhapim - MG",
+    //     "Telefone": "(33) 3315-1011",
+    //     "WhatsApp": "https://wa.me/553333151011",
+    //     "Instagram": "https://www.instagram.com/laboratoriolaborcentro/",
+    //     "Site": "www.laboratoriolaborcentro.com.br",
+    //     "Facebook": "https://www.facebook.com/laboratoriolaborcentro/?locale=pt_BR"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/casa-dos-azulejos.png",
+    //     "Nome": "Casa dos Azulejos",
+    //     "Descrição": "Especialistas em revestimentos e acabamentos para tornar seu projeto ainda mais bonito e sofisticado.",
+    //     "Endereço": "Rua Alberto Azevedo, 575 centro Inhapim -MG",
+    //     "Telefone": "(33) 3315-1410",
+    //     "WhatsApp": "https://wa.me/5533984335023",
+    //     "Instagram": "https://www.instagram.com/casadosazulejosinhapim/",
+    //     "Site": "http://www.casadosazulejosinhapim.com.br/",
+    //     "Facebook": "https://www.facebook.com/casadosazulejosinhapimmg/?locale=pt_BR"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/Studio-F.png",
+    //     "Nome": "Studio F. SPA Urbano",
+    //     "Descrição": "Viva uma experiência incrível! Nós ajudamos mulheres bonitas a se tornarem DESLUMBRANTES!",
+    //     "Endereço": "Rua Carmo Viggiano, Inhapim, MG, Brazil",
+    //     "Telefone": "(33) 3315-1367",
+    //     "WhatsApp": "https://wa.me/553333151367",
+    //     "Instagram": "https://www.instagram.com/studiofspa/",
+    //     "Site": "https://loja.studiofspa.com.br/",
+    //     "Facebook": "https://www.facebook.com/StudioFspaurbano/?locale=pt_BR"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/madeireira-alvarenga.png",
+    //     "Nome": "Madeireira Alvarenga",
+    //     "Descrição": "Material de construção e produtos rurais.",
+    //     "Endereço": "Osvaldo Silva Araújo nº 667 , Centro Inhapim MG",
+    //     "Telefone": "(33) 3315-1009",
+    //     "WhatsApp": null,
+    //     "Instagram": "https://www.instagram.com/madeireiraalvarenga?igsh=MTNzNnFpbDZvcjcxeA==",
+    //     "Site": null,
+    //     "Facebook": "https://www.facebook.com/madeireira.alvarenga.1/about_details?locale=pt_BR"
+    //   },
+    //   {
+    //     "Banner": "assets/images/header/pablo-coelho.png",
+    //     "Nome": "Pablo Coelho",
+    //     "Descrição": "Momentos eternizados para sempre.",
+    //     "Endereço": null,
+    //     "Telefone": "(33) 99835-4558",
+    //     "WhatsApp": "https://wa.me/5533998354558",
+    //     "Instagram": "https://www.instagram.com/pablocoellhoph?igsh=MWoxZ3h3eG00NWJuMA==",
+    //     "Site": "https://linktr.ee/Pablocoellho?utm_source=linktree_profile_share&ltsid=3eda1648-a8fe-4fa0-974e-6cc6acf47f98",
+    //     "Facebook": null
+    //   }
+    // ]
+
+
 
 
 
     //===== close navbar-collapse when a  clicked
+   
     let navbarTogglerNine = document.querySelector(
       ".navbar-nine .navbar-toggler"
     );
