@@ -1926,7 +1926,7 @@ p {
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .footer-eleven {
     padding-top: 15px;
-    padding-bottom: 0;
+    padding-bottom: 5px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1943,12 +1943,12 @@ p {
 }
 .footer-eleven .footer-widget h5 {
   font-weight: 700;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   color: var(--black);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .footer-eleven .footer-widget h5 {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 }
 .footer-eleven .f-about {
