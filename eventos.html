@@ -112,7 +112,7 @@
                 <div class="footer-widget f-link">
                   <h5>Detalhes</h5>
                   <ul>
-                   
+
                     <li><a href="./politica-de-privacidade.html">Política de Privacidade</a></li>
                     <li><a href="https://wa.me/5533998801097">Fale Conosco</a></li>
                   </ul>
@@ -133,7 +133,7 @@
                 </div>
                 <!-- End Single Widget -->
               </div>
-             
+
             </div>
           </div>
         </div>
@@ -159,47 +159,55 @@
   <script src="assets/js/tiny-slider.js"></script>
 
   <script>
-    const eventItems = [
-      {
-        "title": "Rodada de Negócios Setorial",
-        "description": "Um evento voltado para um setor específico (como comércio ou serviços) onde empresas participantes podem apresentar suas soluções e criar parcerias estratégicas.",
-        "day": "10",
-        "month": "Dez"
-      },
-      {
-        "title": "Café com Networking Empresarial",
-        "description": "Um encontro casual onde empresários locais podem trocar experiências e fazer novas conexões. O evento inclui palestras rápidas sobre inovação no mercado e oportunidades de parceria.",
-        "day": "15",
-        "month": "Out"
-      },
-      {
-        "title": "Workshop de Transformação Digital",
-        "description": "Um evento focado em mostrar aos associados como implementar tecnologias digitais para otimizar operações e aumentar a competitividade, com especialistas em e-commerce e automação.",
-        "day": "22",
-        "month": "Nov"
-      },
+    fetch('https://vnwmilmmlsziggyrpmty.supabase.co/rest/v1/eventos', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZud21pbG1tbHN6aWdneXJwbXR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg0OTUxNzEsImV4cCI6MjA0NDA3MTE3MX0.sd_r0TYhej4ZZCa9HkvPUKxW2AjJdnMqfgNUj_fD8jE' // Passa a API Key no header
+      }
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erro na requisição: ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        data.forEach((item, index) => {
+          // Supondo que item.data seja a string da data no formato '2024-10-30'
+          const [year, month, day] = item.data.split('-'); // Divide a data em partes
 
-    ]
+          // Mapeia o número do mês para o nome do mês (opcional)
+          const monthNames = [
+            "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
+            "Jul", "Ago", "Set", "Out", "Nov", "Dez"
+          ];
+          const monthName = monthNames[parseInt(month) - 1]; // Obtém o nome do mês
 
-    eventItems.forEach((item, index) => {
-      const container = document.getElementById("event-list");
-      const eventItemHTML = `
-             <li>
+          const container = document.getElementById("event-list");
+          const eventItemHTML = `
+            <li>
               <div class="event-details">
-                <div class="event-title">${item.title}</div>
-                <div class="event-description">${item.description}</div>
+                <div class="event-title">${item.titulo}</div>
+                <div class="event-description">${item.descrição}</div>
               </div>
               <div class="event-date">
                 <div>
-                  <div class="day">${item.day}</div>
-                  <div class="month">${item.month}</div>
+                  <div class="day">${day}</div>
+                  <div class="month">${monthName}</div>
                 </div>
               </div>
             </li>
-          `;
+        `;
 
-      container.innerHTML += eventItemHTML;
-    });
+          container.innerHTML += eventItemHTML;
+        });
+
+      })
+      .catch(error => {
+        console.error('Erro:', error);
+      });
+
 
     //===== close navbar-collapse when a  clicked
     let navbarTogglerNine = document.querySelector(

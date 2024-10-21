@@ -111,7 +111,7 @@
                 <div class="footer-widget f-link">
                   <h5>Detalhes</h5>
                   <ul>
-                   
+
                     <li><a href="./politica-de-privacidade.html">Política de Privacidade</a></li>
                     <li><a href="https://wa.me/5533998801097">Fale Conosco</a></li>
                   </ul>
@@ -132,7 +132,7 @@
                 </div>
                 <!-- End Single Widget -->
               </div>
-            
+
             </div>
           </div>
         </div>
@@ -159,51 +159,48 @@
 
   <script>
 
-    const aboutItems = [
-      {
-        "image": "assets/images/about/1.png",
-      },
-      {
-        "image": "assets/images/about/2.png",
-      },
-      {
-        "image": "assets/images/about/3.png",
-      },
-      {
-        "image": "assets/images/about/4.png",
-      },
-      {
-        "image": "assets/images/about/1.png",
-      },
-      {
-        "image": "assets/images/about/2.png",
+    fetch('https://vnwmilmmlsziggyrpmty.supabase.co/rest/v1/galeria-de-fotos', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZud21pbG1tbHN6aWdneXJwbXR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg0OTUxNzEsImV4cCI6MjA0NDA3MTE3MX0.sd_r0TYhej4ZZCa9HkvPUKxW2AjJdnMqfgNUj_fD8jE' // Passa a API Key no header
       }
-    ]
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erro na requisição: ' + response.statusText);
+        }
+        return response.json();
+      })
+      .then(data => {
+        data.forEach((item, index) => {
 
-    aboutItems.forEach((item, index) => {
-
-      if (aboutItems.length === 1) {
-        var rounded = "rounded-top-start rounded-top-end rounded-bottom-start rounded-bottom-end";
-      } else if (aboutItems.length === 2 && index === 0) {
-        var rounded = "rounded-top-start rounded-bottom-start";
-      } else if (aboutItems.length === 2 && index === 1) {
-        var rounded = "rounded-top-end rounded-bottom-end";
-      } else if (aboutItems.length > 2 && index === 0) {
-        var rounded = "rounded-top-start";
-      } else if (aboutItems.length > 2 && index === 1) {
-        var rounded = "rounded-top-end";
-      } else if (aboutItems.length > 2 && aboutItems.length - 1 === index) {
-        var rounded = "rounded-bottom-end";
-      } else if (aboutItems.length > 2 && aboutItems.length - 2 === index) {
-        var rounded = "rounded-bottom-start";
-      }
-      const container = document.getElementById("about-image");
-      const aboutItemHTML = `
+          if (data.length === 1) {
+            var rounded = "rounded-top-start rounded-top-end rounded-bottom-start rounded-bottom-end";
+          } else if (data.length === 2 && index === 0) {
+            var rounded = "rounded-top-start rounded-bottom-start";
+          } else if (data.length === 2 && index === 1) {
+            var rounded = "rounded-top-end rounded-bottom-end";
+          } else if (data.length > 2 && index === 0) {
+            var rounded = "rounded-top-start";
+          } else if (data.length > 2 && index === 1) {
+            var rounded = "rounded-top-end";
+          } else if (data.length > 2 && data.length - 1 === index) {
+            var rounded = "rounded-bottom-end";
+          } else if (data.length > 2 && data.length - 2 === index) {
+            var rounded = "rounded-bottom-start";
+          }
+          const container = document.getElementById("about-image");
+          const aboutItemHTML = `
             <img class="${rounded}" src="${item.image}" alt="${index}" />
           `;
 
-      container.innerHTML += aboutItemHTML;
-    });
+          container.innerHTML += aboutItemHTML;
+        });
+      })
+      .catch(error => {
+        console.error('Erro:', error);
+      });
 
     //===== close navbar-collapse when a  clicked
     let navbarTogglerNine = document.querySelector(
