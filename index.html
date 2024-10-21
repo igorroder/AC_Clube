@@ -104,7 +104,11 @@
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-image">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner header-image" id="container-carousel"></div>
+              <div class="carousel-inner header-image" id="container-carousel">
+                <div class="carousel-item active" data-bs-interval="2000" id="carousel-item-1">
+                  <img src="../ACClube/assets/images/header/loading.svg" class="d-block w-100" alt="test">
+                </div>
+              </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -330,7 +334,6 @@
   <script src="assets/js/tiny-slider.js"></script>
 
   <script>
-    let carouselItems = []
     fetch('https://vnwmilmmlsziggyrpmty.supabase.co/rest/v1/membros', {
       method: 'GET',
       headers: {
@@ -371,6 +374,11 @@
 
           container.innerHTML += carouselItemHTML;
         });
+        setTimeout(() => {
+          var elemento = document.getElementById("carousel-item-1");
+          elemento.remove();
+        } , 1000);
+       
       })
       .catch(error => {
         console.error('Erro:', error);
@@ -561,7 +569,8 @@
 
 
     //===== close navbar-collapse when a  clicked
-   
+
+
     let navbarTogglerNine = document.querySelector(
       ".navbar-nine .navbar-toggler"
     );
